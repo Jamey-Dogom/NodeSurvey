@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Dojo Survey Index</title>
+</head>
+<style>
+    .container {
+        margin-top: 10%;
+        padding: 40px;
+        border: 2px solid black;
+    }
+
+    .ilb {
+        display: inline-block;
+    }
+
+    .pad0 {
+        padding: 0;
+    }
+
+    .ul {
+        text-decoration: underline;
+    }
+
+    .info {
+        align-content: center;
+    }
+
+    .mgbt-20 {
+        margin-bottom: 5%;
+    }
+
+    tr {
+        font-size: 20px;
+    }
+
+    td {
+        font-size: 18px;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="ul mgbt-20">Submitted Info</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Request</th>
+                    <th scope="col">User Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (var user of results) { %>
+                <tr>
+                    <td>Email:</td>
+                    <td><%= user.name %></td>
+                </tr>
+                <tr>
+                    <td>Dojo Location: </td>
+                    <td><%= user.location %></td>
+                </tr>
+                <tr>
+                    <td>Favorite Language: </td>
+                    <td><%= user.language %></td>
+                </tr>
+                <tr>
+                    <td>Comment: </td>
+                    <td><%= user.comment %></td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+
+</html>
